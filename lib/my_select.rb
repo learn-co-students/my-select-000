@@ -2,14 +2,14 @@ require 'pry'
 
 def my_select(collection)
 	i = 0
-	selection = []
+	new_collection = []
 	if collection.length > 0
 		while i < collection.length
 			if yield(collection[i]) == true
-			    selection << collection[i]
+			    new_collection << collection[i]
 			end
 			i+=1
 		end
 	end
-	selection
+	new_collection
 end
