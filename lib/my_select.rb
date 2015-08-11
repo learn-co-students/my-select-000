@@ -3,7 +3,7 @@ require 'pry'
 def my_select(collection)
 	i = 0
 	selection = []
-	if collection.length > 0
+	if collection.length>0
 		while i < collection.length
 			if yield(collection[i]) == true
 			    selection << collection[i]
